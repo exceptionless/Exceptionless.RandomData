@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
+﻿using Xunit;
 
-namespace Exceptionless.RandomData.Tests
+namespace Exceptionless.Tests
 {
     public class RandomDataTests
     {
         [Fact]
         public void CanGenerateRandomData() {
-            // TODO: Write some tests for this.
+            int value = RandomData.GetInt(1, 5);
+            Assert.InRange(value, 1, 5);
+
+            value = _numbers.Random();
+            Assert.InRange(value, 1, 3);
         }
+
+        private int[] _numbers = new[] {1, 2, 3};
     }
 }
