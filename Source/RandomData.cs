@@ -159,7 +159,7 @@ namespace Exceptionless {
                 throw new ArgumentException("T must be an enum type.");
 
             Array values = Enum.GetValues(typeof(T));
-            return (T)values.GetValue(GetInt(0, values.Length));
+            return (T)values.GetValue(GetInt(0, values.Length - 1));
         }
 
         public static string GetIp4Address() {
