@@ -235,7 +235,7 @@ namespace Exceptionless {
             builder.Append(UpperCaseFirstCharacter(_words[GetInt(0, _words.Length)]));
             int numberOfWords = GetInt(minWords, maxWords);
             for (int i = 1; i < numberOfWords; i++)
-                builder.Append(' ').Append(_words[GetInt(0, _words.Length)]);
+                builder.Append(' ').Append(_words[GetInt(0, _words.Length - 1)]);
             
             builder.Append('.');
             return builder.ToString();
