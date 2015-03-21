@@ -13,6 +13,19 @@ namespace Exceptionless.Tests
             Assert.InRange(value, 1, 3);
         }
 
+        [Fact]
+        public void GetEnumWithOneValueTest()
+        {
+            var result = RandomData.GetEnum<_days>();
+
+            Assert.Equal<_days>(_days.Monday, result);
+        }
+
         private int[] _numbers = new[] {1, 2, 3};
+
+        private enum _days
+        {
+            Monday
+        }
     }
 }
