@@ -5,7 +5,8 @@ namespace Exceptionless.Tests
     public class RandomDataTests
     {
         [Fact]
-        public void CanGenerateRandomData() {
+        public void CanGenerateRandomData()
+        {
             int value = RandomData.GetInt(1, 5);
             Assert.InRange(value, 1, 5);
 
@@ -21,7 +22,15 @@ namespace Exceptionless.Tests
             Assert.Equal<_days>(_days.Monday, result);
         }
 
-        private int[] _numbers = new[] {1, 2, 3};
+        [Fact]
+        public void GetSentencesTest()
+        {
+            var result = RandomData.GetSentence();
+
+            Assert.False(string.IsNullOrEmpty(result));
+        }
+
+        private int[] _numbers = new[] { 1, 2, 3 };
 
         private enum _days
         {
