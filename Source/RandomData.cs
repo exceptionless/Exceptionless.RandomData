@@ -232,7 +232,7 @@ namespace Exceptionless {
                 throw new ArgumentException("maxWords must 3 or more.", "maxWords");
 
             var builder = new StringBuilder();
-            builder.Append(UpperCaseFirstCharacter(_words[GetInt(0, _words.Length)]));
+            builder.Append(UpperCaseFirstCharacter(_words[GetInt(0, _words.Length - 1)]));
             int numberOfWords = GetInt(minWords, maxWords);
             for (int i = 1; i < numberOfWords; i++)
                 builder.Append(' ').Append(_words[GetInt(0, _words.Length - 1)]);
