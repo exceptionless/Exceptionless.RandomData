@@ -193,11 +193,13 @@ namespace Exceptionless {
             }
         }
 
+        // Some characters are left out because they are hard to tell apart.
         private const string DEFAULT_ALPHA_CHARS = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
         public static string GetAlphaString(int minLength = 5, int maxLength = 20) {
             return GetString(minLength, maxLength, DEFAULT_ALPHA_CHARS);
         }
 
+        // Some characters are left out because they are hard to tell apart.
         private const string DEFAULT_ALPHANUMERIC_CHARS = "abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
         public static string GetAlphaNumericString(int minLength = 5, int maxLength = 20) {
             return GetString(minLength, maxLength, DEFAULT_ALPHANUMERIC_CHARS);
