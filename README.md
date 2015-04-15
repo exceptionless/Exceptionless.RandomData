@@ -15,7 +15,7 @@ Utility class to easily generate random data. This makes generating good unit te
 Below is a small sample of what you can do, so check it out!
 
 ```csharp
-private int[] _numbers = new[] { 1, 2, 3 };
+private int[] _numbers = new[] { 1, 2, 3, 4, 5 };
 
 private enum _days {
     Monday,
@@ -23,5 +23,8 @@ private enum _days {
 }
 
 int value = RandomData.GetInt(1, 5);
+// or
+value = _numbers.Random();
+    
 var day = RandomData.GetEnum<_days>();
 ```
