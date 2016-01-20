@@ -28,7 +28,7 @@ namespace Exceptionless {
             if (String.IsNullOrEmpty(min))
                 min = "0.0.0.0";
             if (String.IsNullOrEmpty(max))
-                min = "25.100.9999.9999";
+                max = "25.100.9999.9999";
 
             Version minVersion, maxVersion;
             if (!Version.TryParse(min, out minVersion))
