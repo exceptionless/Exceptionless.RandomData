@@ -1,12 +1,9 @@
 ﻿using Xunit;
 
-namespace Exceptionless.Tests
-{
-    public class RandomDataTests
-    {
+namespace Exceptionless.Tests {
+    public class RandomDataTests {
         [Fact]
-        public void CanGenerateRandomData()
-        {
+        public void RandomInt() {
             int value = RandomData.GetInt(1, 5);
             Assert.InRange(value, 1, 5);
 
@@ -15,16 +12,20 @@ namespace Exceptionless.Tests
         }
 
         [Fact]
-        public void GetEnumWithOneValueTest()
-        {
+        public void RandomDecimal() {
+            decimal value = RandomData.GetDecimal(1, 5);
+            Assert.InRange(value, 1, 5);
+        }
+        
+        [Fact]
+        public void GetEnumWithOneValueTest() {
             var result = RandomData.GetEnum<_days>();
 
             Assert.Equal<_days>(_days.Monday, result);
         }
 
         [Fact]
-        public void GetSentencesTest()
-        {
+        public void GetSentencesTest() {
             var result = RandomData.GetSentence();
 
             Assert.False(string.IsNullOrEmpty(result));
@@ -32,8 +33,7 @@ namespace Exceptionless.Tests
 
         private int[] _numbers = new[] { 1, 2, 3 };
 
-        private enum _days
-        {
+        private enum _days {
             Monday
         }
     }
