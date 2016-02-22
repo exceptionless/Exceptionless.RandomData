@@ -145,13 +145,13 @@ namespace Exceptionless {
         }
 
         public static decimal GetDecimal() {
-            byte scale = (byte)Instance.Next(29);
+            return GetDecimal(GetInt(), GetInt());
+        }
+
+        public static decimal GetDecimal(int min, int max) {
+            byte scale = (byte) Instance.Next(29);
             bool sign = Instance.Next(2) == 1;
-            return new decimal(GetInt(),
-                               GetInt(),
-                               GetInt(),
-                               sign,
-                               scale);
+            return new decimal(min, GetInt(min, max), max, sign, scale);
         }
 
         public static T GetEnum<T>() {
