@@ -1,5 +1,7 @@
 # Exceptionless.RandomData
-[![Build status](https://ci.appveyor.com/api/projects/status/jiw0i4c33c70ofqq/branch/master?svg=true)](https://ci.appveyor.com/project/Exceptionless/exceptionless-randomdata) [![NuGet Version](http://img.shields.io/nuget/v/Exceptionless.RandomData.svg?style=flat)](https://www.nuget.org/packages/Exceptionless.RandomData/) [![NuGet Downloads](http://img.shields.io/nuget/dt/Exceptionless.RandomData.svg?style=flat)](https://www.nuget.org/packages/Exceptionless.RandomData/) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/exceptionless/Discuss)
+[![Build status](https://ci.appveyor.com/api/projects/status/jiw0i4c33c70ofqq/branch/master?svg=true)](https://ci.appveyor.com/project/Exceptionless/exceptionless-randomdata) 
+[![NuGet Version](http://img.shields.io/nuget/v/Exceptionless.RandomData.svg?style=flat)](https://www.nuget.org/packages/Exceptionless.RandomData/)
+[![Slack Status](https://slack.exceptionless.com/badge.svg)](https://slack.exceptionless.com)
 
 Utility class to easily generate random data. This makes generating good unit test data a breeze!
 
