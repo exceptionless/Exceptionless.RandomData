@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -153,7 +154,7 @@ namespace Exceptionless {
         }
 
         public static T GetEnum<T>() {
-            if (!typeof(T).IsEnum)
+            if (!typeof(T).GetTypeInfo().IsEnum)
                 throw new ArgumentException("T must be an enum type.");
 
             Array values = Enum.GetValues(typeof(T));
@@ -173,7 +174,7 @@ namespace Exceptionless {
             if (byteSize < allowedCharSet.Length)
                 throw new ArgumentException(String.Format("allowedChars may contain no more than {0} characters.", byteSize));
 
-            using (var rng = new RNGCryptoServiceProvider()) {
+            using (var rng = RandomNumberGenerator.Create()) {
                 var result = new StringBuilder();
                 var buf = new byte[128];
 
