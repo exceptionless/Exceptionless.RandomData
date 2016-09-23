@@ -31,7 +31,7 @@ build_script:
   - dotnet pack "src\Exceptionless.RandomData" -c Release -o artifacts
   
 test_script:
-  - dotnet test "src\Exceptionless.RandomData.Tests"
+  - dotnet test "tests\Exceptionless.RandomData.Tests"
 
 artifacts:
   - path: artifacts\*.nupkg
