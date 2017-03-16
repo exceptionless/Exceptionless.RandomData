@@ -18,9 +18,6 @@ before_build:
   - appveyor-retry dotnet restore -v Minimal
 
 build_script: 
-  - dotnet pack "src\Exceptionless.RandomData" -c Release -o artifacts
-  
-test_script:
   - dotnet build -c Release
   - dotnet pack -c Release
 
