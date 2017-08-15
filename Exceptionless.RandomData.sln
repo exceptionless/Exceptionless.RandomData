@@ -1,15 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{98954EAB-7EFF-44E3-A9D0-1A21AD220B8B}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
-		build\common.props = build\common.props
 		README.md = README.md
-		build\sourcelink.props = build\sourcelink.props
-		build\test.props = build\test.props
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exceptionless.RandomData", "src\Exceptionless.RandomData\Exceptionless.RandomData.csproj", "{6D157F81-A2C0-440C-A10B-488A8D3A7BF4}"
@@ -33,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B10F436C-D47D-4639-9C4D-74302C562D89}
 	EndGlobalSection
 EndGlobal

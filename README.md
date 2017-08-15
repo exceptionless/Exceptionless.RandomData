@@ -9,7 +9,7 @@ Utility class to easily generate random data. This makes generating good unit te
 
 [This package](https://www.nuget.org/packages/Exceptionless.RandomData/) can be installed via the [NuGet package manager](https://docs.nuget.org/consume/Package-Manager-Dialog). If you need help, please contact us via in-app support or [open an issue](https://github.com/exceptionless/Exceptionless.RandomData/issues/new). We’re always here to help if you have any questions!
 
-1. You will need to have [Visual Studio 2013](http://www.visualstudio.com/products/visual-studio-community-vs) installed.
+1. You will need to have [Visual Studio 2017](http://www.visualstudio.com/products/visual-studio-community-vs) installed.
 2. Open the `Exceptionless.RandomData.sln` Visual Studio solution file.
 
 ## Using RandomData
