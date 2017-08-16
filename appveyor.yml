@@ -30,6 +30,7 @@ build_script:
 test_script:
   - ps: Push-Location .\test\Exceptionless.RandomData.Tests
   - ps: dotnet xunit -configuration Release
+  - ps: Pop-Location
 
 after_test:
   - ps: dotnet pack -c Release
