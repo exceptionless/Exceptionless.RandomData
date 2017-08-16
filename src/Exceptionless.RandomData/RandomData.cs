@@ -7,13 +7,11 @@ using System.Text;
 
 namespace Exceptionless {
     public static class RandomData {
-        private static readonly Random _random;
-
         static RandomData() {
-            _random = new Random(Environment.TickCount);
+            Instance = new Random(Environment.TickCount);
         }
 
-        public static Random Instance { get { return _random; } }
+        public static Random Instance { get; }
 
         public static int GetInt(int min, int max) {
             if (min == max)

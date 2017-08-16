@@ -6,6 +6,13 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\Exceptionless.RandomData\Exceptionless.RandomData.csproj" />
   </ItemGroup>
+
+  <PropertyGroup Label="Signing">
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <AssemblyOriginatorKeyFile>..\..\Exceptionless.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Foundatio.Logging.Xunit" Version="5.1.1474" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
