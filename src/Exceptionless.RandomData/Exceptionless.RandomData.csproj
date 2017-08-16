@@ -2,7 +2,7 @@
   <Import Project="..\..\build\version.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Product>Exceptionless RandomData Generator</Product>
     <Description>Exceptionless RandomData Generator</Description>
     <Copyright>Copyright (c) 2017 Exceptionless.  All rights reserved.</Copyright>
@@ -20,6 +20,12 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/exceptionless/Exceptionless.RandomData</RepositoryUrl>
     <VersionSuffix Condition="'$(VersionSuffix)'!='' AND '$(BuildNumber)' != ''">$(VersionSuffix)-$(BuildNumber)</VersionSuffix>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="Signing">
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <AssemblyOriginatorKeyFile>..\Exceptionless.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
