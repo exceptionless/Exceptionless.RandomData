@@ -1,0 +1,44 @@
+<Project>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Product>Exceptionless RandomData Generator</Product>
+    <Description>Exceptionless RandomData Generator</Description>
+    <PackageProjectUrl>https://github.com/exceptionless/Exceptionless.RandomData</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/exceptionless/Exceptionless.RandomData/releases</PackageReleaseNotes>
+    <PackageTags>Random;Data;Generator;Test</PackageTags>
+    <MinVerSkip Condition="'$(Configuration)' == 'Debug'">true</MinVerSkip>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    
+    <Copyright>Copyright (c) 2020 Exceptionless.  All rights reserved.</Copyright>
+    <Authors>Exceptionless</Authors>
+    <NoWarn>$(NoWarn);CS1591;NU1701</NoWarn>
+    <WarningsAsErrors>true</WarningsAsErrors>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageOutputPath>$(SolutionDir)artifacts</PackageOutputPath>
+    <PackageIcon>exceptionless-icon.png</PackageIcon>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Signing">
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)Exceptionless.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+    <PackageReference Include="AsyncFixer" Version="1.1.6" PrivateAssets="All" />
+    <PackageReference Include="MinVer" Version="2.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../LICENSE.txt" Pack="true" Visible="false" PackagePath="$(PackageLicenseFile)" />
+    <None Include="../../build/exceptionless-icon.png" Pack="true" PackagePath="$(PackageIcon)" />
+  </ItemGroup>
+  
+</Project>
