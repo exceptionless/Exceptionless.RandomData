@@ -1,5 +1,5 @@
 # Exceptionless.RandomData
-[![Build status](https://ci.appveyor.com/api/projects/status/jiw0i4c33c70ofqq/branch/master?svg=true)](https://ci.appveyor.com/project/Exceptionless/exceptionless-randomdata) 
+[![Build status](https://github.com/Exceptionless/Exceptionless.RandomData/workflows/Build/badge.svg)](https://github.com/Exceptionless/Exceptionless.RandomData/actions)
 [![NuGet Version](http://img.shields.io/nuget/v/Exceptionless.RandomData.svg?style=flat)](https://www.nuget.org/packages/Exceptionless.RandomData/)
 [![Slack Status](https://slack.exceptionless.com/badge.svg)](https://slack.exceptionless.com)
 
@@ -9,8 +9,8 @@ Utility class to easily generate random data. This makes generating good unit te
 
 [This package](https://www.nuget.org/packages/Exceptionless.RandomData/) can be installed via the [NuGet package manager](https://docs.nuget.org/consume/Package-Manager-Dialog). If you need help, please contact us via in-app support or [open an issue](https://github.com/exceptionless/Exceptionless.RandomData/issues/new). We’re always here to help if you have any questions!
 
-1. You will need to have [Visual Studio 2017](http://www.visualstudio.com/products/visual-studio-community-vs) installed.
-2. Open the `Exceptionless.RandomData.sln` Visual Studio solution file.
+1. You will need to have [Visual Studio Code](https://code.visualstudio.com/) installed.
+2. Open the root folder.
 
 ## Using RandomData
 
