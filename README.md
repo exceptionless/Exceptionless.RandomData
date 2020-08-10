@@ -30,3 +30,7 @@ value = _numbers.Random();
     
 var day = RandomData.GetEnum<_days>();
 ```
+
+## Thanks to all the people who have contributed
+
+[![contributors](https://contributors-img.web.app/image?repo=exceptionless/Exceptionless.RandomData)](https://github.com/exceptionless/Exceptionless.RandomData/graphs/contributors)
