@@ -1,7 +1,9 @@
 # Exceptionless.RandomData
+
 [![Build status](https://github.com/Exceptionless/Exceptionless.RandomData/workflows/Build/badge.svg)](https://github.com/Exceptionless/Exceptionless.RandomData/actions)
 [![NuGet Version](http://img.shields.io/nuget/v/Exceptionless.RandomData.svg?style=flat)](https://www.nuget.org/packages/Exceptionless.RandomData/)
-[![Slack Status](https://slack.exceptionless.com/badge.svg)](https://slack.exceptionless.com)
+[![Discord](https://img.shields.io/discord/715744504891703319)](https://discord.gg/6HxgFCx)
+[![Donate](https://img.shields.io/badge/donorbox-donate-blue.svg)](https://donorbox.org/exceptionless?recurring=true)
 
 Utility class to easily generate random data. This makes generating good unit test data a breeze!
 
@@ -27,7 +29,7 @@ private enum _days {
 int value = RandomData.GetInt(1, 5);
 // or
 value = _numbers.Random();
-    
+
 var day = RandomData.GetEnum<_days>();
 ```
 

@@ -6,24 +6,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
       with:
         fetch-depth: 0
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.302
+        dotnet-version: 5.0.x
     - name: Build Reason
       run: "echo ref: ${{github.ref}} event: ${{github.event_name}}"
     - name: Build Version
       run: |
-        dotnet tool install --global minver-cli --version 2.3.0
+        dotnet tool install --global minver-cli --version 2.5.0
         version=$(minver --tag-prefix v)
-        echo "::set-env name=MINVERVERSIONOVERRIDE::$version"
+        echo "MINVERVERSIONOVERRIDE=$version" >> $GITHUB_ENV
+        echo "VERSION=$version" >> $GITHUB_ENV
     - name: Build
       run: dotnet build --configuration Release
-    - name: Start Services
-      run: docker-compose up -d && docker-compose up ready
     - name: Run Tests
       run: dotnet test --configuration Release --no-build
     - name: Package
@@ -37,7 +36,7 @@ jobs:
       run: |
         for package in $(find -name "*.nupkg" | grep "minver" -v); do
           echo "${0##*/}": Pushing $package...
-          
+
           # GitHub
           gpr push $package -k ${{ secrets.GITHUB_TOKEN }} || true
 
