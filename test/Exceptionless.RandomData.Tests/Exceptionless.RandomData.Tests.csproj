@@ -14,6 +14,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Foundatio.Xunit" Version="10.4.0" />
+    <PackageReference Include="Foundatio.Xunit" Version="10.6.0" />
   </ItemGroup>
 </Project>
