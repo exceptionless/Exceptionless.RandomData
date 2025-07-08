@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".github/workflows/build.yml" />
+    <File Path="build/common.props" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="src/Exceptionless.RandomData/Exceptionless.RandomData.csproj" />
+  <Project Path="test/Exceptionless.RandomData.Tests/Exceptionless.RandomData.Tests.csproj" />
+</Solution>
