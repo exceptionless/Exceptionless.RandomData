@@ -20,21 +20,21 @@ public class RandomDataTests {
 
     [Fact]
     public void GetEnumWithOneValueTest() {
-        var result = RandomData.GetEnum<_days>();
+        var result = RandomData.GetEnum<Days>();
 
-        Assert.Equal<_days>(_days.Monday, result);
+        Assert.Equal(Days.Monday, result);
     }
 
     [Fact]
     public void GetSentencesTest() {
-        var result = RandomData.GetSentence();
+        string result = RandomData.GetSentence();
 
         Assert.False(String.IsNullOrEmpty(result));
     }
 
-    private int[] _numbers = [1, 2, 3];
+    private readonly int[] _numbers = [1, 2, 3];
 
-    private enum _days {
+    private enum Days {
         Monday
     }
 }
