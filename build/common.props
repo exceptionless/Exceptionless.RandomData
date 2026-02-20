@@ -1,7 +1,9 @@
 <Project>
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Product>Exceptionless RandomData Generator</Product>
     <Description>Exceptionless RandomData Generator</Description>
     <PackageProjectUrl>https://github.com/exceptionless/Exceptionless.RandomData</PackageProjectUrl>
@@ -10,9 +12,9 @@
     <MinVerSkip Condition="'$(Configuration)' == 'Debug'">true</MinVerSkip>
     <MinVerTagPrefix>v</MinVerTagPrefix>
 
-    <Copyright>Copyright (c) 2025 Exceptionless.  All rights reserved.</Copyright>
+    <Copyright>Copyright © $([System.DateTime]::Now.ToString(yyyy)) Exceptionless.  All rights reserved.</Copyright>
     <Authors>Exceptionless</Authors>
-    <NoWarn>$(NoWarn);CS1591;NU1701</NoWarn>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
     <WarningsAsErrors>true</WarningsAsErrors>
     <LangVersion>latest</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -31,9 +33,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
-    <PackageReference Include="AsyncFixer" Version="1.6.0" PrivateAssets="All" />
-    <PackageReference Include="MinVer" Version="5.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.103" PrivateAssets="All"/>
+    <PackageReference Include="AsyncFixer" Version="2.1.0" PrivateAssets="All" />
+    <PackageReference Include="MinVer" Version="7.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>

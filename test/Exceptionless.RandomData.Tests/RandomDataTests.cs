@@ -1,40 +1,40 @@
-﻿using Xunit;
+using Xunit;
 
-namespace Exceptionless.Tests {
-    public class RandomDataTests {
-        [Fact]
-        public void RandomInt() {
-            int value = RandomData.GetInt(1, 5);
-            Assert.InRange(value, 1, 5);
+namespace Exceptionless.Tests;
 
-            value = _numbers.Random();
-            Assert.InRange(value, 1, 3);
-        }
+public class RandomDataTests {
+    [Fact]
+    public void RandomInt() {
+        int value = RandomData.GetInt(1, 5);
+        Assert.InRange(value, 1, 5);
 
-        [Fact]
-        public void RandomDecimal() {
-            decimal value = RandomData.GetDecimal(1, 5);
-            Assert.InRange(value, 1, 5);
-        }
-        
-        [Fact]
-        public void GetEnumWithOneValueTest() {
-            var result = RandomData.GetEnum<_days>();
+        value = _numbers.Random();
+        Assert.InRange(value, 1, 3);
+    }
 
-            Assert.Equal<_days>(_days.Monday, result);
-        }
+    [Fact]
+    public void RandomDecimal() {
+        decimal value = RandomData.GetDecimal(1, 5);
+        Assert.InRange(value, 1, 5);
+    }
 
-        [Fact]
-        public void GetSentencesTest() {
-            var result = RandomData.GetSentence();
+    [Fact]
+    public void GetEnumWithOneValueTest() {
+        var result = RandomData.GetEnum<Days>();
 
-            Assert.False(string.IsNullOrEmpty(result));
-        }
+        Assert.Equal(Days.Monday, result);
+    }
 
-        private int[] _numbers = new[] { 1, 2, 3 };
+    [Fact]
+    public void GetSentencesTest() {
+        string result = RandomData.GetSentence();
 
-        private enum _days {
-            Monday
-        }
+        Assert.False(String.IsNullOrEmpty(result));
+    }
+
+    private readonly int[] _numbers = [1, 2, 3];
+
+    private enum Days {
+        Monday
     }
 }
