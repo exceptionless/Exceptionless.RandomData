@@ -78,6 +78,7 @@ test
 - **`Math.Clamp`**: Use instead of separate `Math.Min`/`Math.Max` calls
 - **Generic constraints**: Use `where T : struct, Enum` instead of runtime `typeof(T).IsEnum` checks
 - **Pattern matching**: Use `is null` / `is not null` instead of `== null` / `!= null`
+- **Nullable flow attributes**: Use `[NotNullIfNotNull]`, `[NotNullWhen]`, `[MaybeNullWhen]`, `[AllowNull]` from `System.Diagnostics.CodeAnalysis` to express conditional nullability contracts that the compiler can track through call sites — prefer these over `T?` return types when nullability depends on a specific argument
 
 ### Exceptions
 

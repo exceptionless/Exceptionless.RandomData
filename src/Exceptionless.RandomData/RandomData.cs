@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -380,7 +381,9 @@ public static class RandomData {
 public static class EnumerableExtensions {
     /// <summary>
     /// Returns a random element from <paramref name="items"/>, or <paramref name="defaultValue"/> if the sequence is null or empty.
+    /// The return value is non-null when <paramref name="defaultValue"/> is non-null.
     /// </summary>
+    [return: NotNullIfNotNull(nameof(defaultValue))]
     public static T? Random<T>(this IEnumerable<T>? items, T? defaultValue = default) {
         if (items is null)
             return defaultValue;
